@@ -231,7 +231,7 @@
      \pagestyle{empty}
 }
  
-\newcommand{\showContents}{\newpage{\centering\tableofcontents}\newpage\pagestyle{fancy}\setcounter{page}{1}}
+\newcommand{\showContents}{\newpage{\centering\tableofcontents}\newpage\pagestyle{fancy}}
 \newcommand{\showReference}{ 
 \addcontentsline{toc}{section}{References}
 \bibliographystyle{unsrt}%{brief}%{alpha}%{unsrt}
