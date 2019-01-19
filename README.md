@@ -7,24 +7,22 @@
 - 在此文件夹中建一个image为名的文件夹，以后里面将放图片文件
 - 新建一个.tex文本文件，自己取好文件名，假设为myfile
 - 新建一个.bib文本文件，尽可能与.tex文件同名同文件夹
-- 写文件 myfile.tex ：
-
-  ``` 代码内容
-\documentclass{HZNUMCM}
-  \setControlNumber{888888}
-  \setContestType{MCM}
-  \setProblemLetter{A}
-  \setPaperTitle{ Title title}
-  \setSummary{ sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary}
-\begin{document}
-  \showSummarySheet
-  \showContents
-\section{aaaaaaa}
-\section{bbbbbbb}
-  \addcontentsline{toc}{section}{References}
-  \bibliographystyle{unsrt}%{brief}%{alpha}%{unsrt}
-  \bibliography{paper}
-\end{document}
+- 写文件 myfile.tex,代码内容
+`\documentclass{HZNUMCM}
+`  \setControlNumber{888888}
+`  \setContestType{MCM}
+`  \setProblemLetter{A}
+`  \setPaperTitle{ Title title}
+`  \setSummary{ sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary}
+`\begin{document}
+`  \showSummarySheet
+`  \showContents
+`\section{aaaaaaa}
+`\section{bbbbbbb}
+`  \addcontentsline{toc}{section}{References}
+`  \bibliographystyle{unsrt}%{brief}%{alpha}%{unsrt}
+`  \bibliography{paper}
+`\end{document}
  
 
 - myfile.bib文件采用bibtex格式
