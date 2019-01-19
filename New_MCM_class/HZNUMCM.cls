@@ -13,7 +13,8 @@
 \RequirePackage[a4paper,left=2.5cm,right=2.5cm,top=2.5cm,bottom=1.5cm]{geometry}    %页边距和纸张大小
 \RequirePackage{xcolor}                     % 彩色宏包
 \RequirePackage{fancyhdr,fancybox}          % 设置页眉页脚的宏包
-\RequirePackage{graphicx}                   % 插图宏包
+\RequirePackage{graphicx,subfigure,epsfig,graphics}                   % 插图宏包
+\RequirePackage[perpage]{footmisc}  
 \RequirePackage{ifthen}                     % 逻辑结构宏包（仅模板文件用到）
 \RequirePackage{lastpage}                   % 获得最后一面页码的宏包（生成"Page X of XX"）
 \RequirePackage{paralist}                   % 用以修改itemize各项间距的宏包
@@ -34,10 +35,10 @@
 \RequirePackage{latexsym}
 
 %===========目录==============
-\usepackage{titlesec}
-\usepackage{titletoc}
+\RequirePackage{titlesec}
+\RequirePackage{titletoc}
 \setcounter{tocdepth}{3}    % 目录显示到subsubsection(3)级别,若只需到subsection(2)请自改
-\usepackage[font=small,]{caption}   % 使图表标题字号小一号
+\RequirePackage[font=small,]{caption}   % 使图表标题字号小一号
 \def\abstractname{Summary}          % 摘要标题
 
 %=========表格相关===========
@@ -136,12 +137,16 @@
 
 
 % 定理环境的声明，事实上大部分论文中用不到，但仍保留以供使用
-\newtheorem{Theorem}{Theorem}[section]%
-\newtheorem{Lemma}[Theorem]{Lemma}%
-\newtheorem{Corollary}[Theorem]{Corollary}%
-\newtheorem{Proposition}[Theorem]{Proposition}%
-\newtheorem{Definition}[Theorem]{Definition}%
-\newtheorem{Example}[Theorem]{Example}%
+\newtheorem{theorem}{Theorem}[section]%
+\newtheorem{lemma}{Lemma}[section]% 
+\newtheorem{proposition}{Proposition}[section]%
+\newtheorem{definition}{Definition}[section]%
+\newtheorem{example}{Example}[section]%
+\newtheorem{question}{Question}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{conjecture}{Conjecture}[section] 
+\theoremstyle{definition}
+\newtheorem{remark}{Remark}[section]
 
 % 生成一些所需的参数（控制号，队伍名，页眉信息） 
 \newcommand{\setControlNumber}[1]{\def \controlnumber{#1}}
