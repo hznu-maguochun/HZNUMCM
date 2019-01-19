@@ -10,19 +10,33 @@
 - 写文件 myfile.tex,代码内容
 
 `\documentclass{HZNUMCM}`
+
 `  \setControlNumber{888888}`
+
 `  \setContestType{MCM}`
+
 `  \setProblemLetter{A}`
+
 `  \setPaperTitle{ Title title}`
+
 `  \setSummary{ sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary}`
+
 `\begin{document}`
+
 `  \showSummarySheet`
+
 `  \showContents`
+
 `\section{aaaaaaa}`
+
 `\section{bbbbbbb}`
+
 `  \addcontentsline{toc}{section}{References}`
+
 `  \bibliographystyle{unsrt}%{brief}%{alpha}%{unsrt}`
+
 `  \bibliography{paper}`
+
 `\end{document}`
  
 
