@@ -1,6 +1,6 @@
 %% This is a Latex document class file for MCM.
 %% Created by Guochun Ma on Jan. 19 2019 at Xiameng.
-%% This class file comes from A simple MCM Contest Report Template for basic users
+%% This class file comes from easymcm,A simple MCM Contest Report Template for basic users
 %% Oringinal template by latexstudio, <latexstudio@hotmail.com>
 %% improved by youjiarui189 (xjtu-blacksmith), <yjr134@163.com>
 
@@ -8,6 +8,11 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{HZNUMCM}[2019/01/19]
 \typeout{HZNUMCM,version 1.0}
+  
+
+\RequirePackage{pdfpages}
+
+
 
 %=========基本宏包==========
 \RequirePackage[a4paper,left=2.5cm,right=2.5cm,top=2.5cm,bottom=1.5cm]{geometry}    %页边距和纸张大小
@@ -19,11 +24,51 @@
 \RequirePackage{lastpage}                   % 获得最后一面页码的宏包（生成"Page X of XX"）
 \RequirePackage{paralist}                   % 用以修改itemize各项间距的宏包
 % 附录和程序
-\RequirePackage{listings}       % 代码环境宏包
+\RequirePackage{listings} 
+\lstset{
+    breaklines=true,
+    tabsize=3,
+    showstringspaces=true
+}
+\lstdefinestyle{common}
+{
+    extendedchars=true,
+    frame=single,
+    %===========================================================
+    framesep=3pt,%expand outward.
+    framerule=0.4pt,%expand outward.
+    xleftmargin=34pt,%make the frame fits in the text area. 
+    xrightmargin=34pt,%make the frame fits in the text area.
+    %=========================================================== 
+    rulecolor=\color{red}
+}
+
+\lstdefinestyle{latexstyle}
+{
+    style=Common,
+    language={[latex]tex},
+    backgroundcolor=\color{yellow!10},
+    keywordstyle=\color{orange},
+    identifierstyle=\color{cyan},
+    stringstyle=\color{red},
+    commentstyle=\color{blue},
+    upquote,
+    numbers=left,
+    keepspaces=true,
+    columns=spaceflexible,
+    basicstyle=\ttfamily\scriptsize,%
+    breaklines=true,
+    breakindent=0pt, 
+    escapechar={:},
+    emphstyle={[2]{\bfseries\color{Sienna2}}},
+}
+
+
+
+% 代码环境宏包
 \RequirePackage[toc,page,title,titletoc,header]{appendix} % 附录制作宏包
 %======基本参数========
 \setlength{\headheight}{15pt}
-
 %===设置图表标题与上下文间距===
 \setlength{\belowcaptionskip}{4pt}
 \setlength{\abovecaptionskip}{4pt}
@@ -34,6 +79,20 @@
 \RequirePackage{amssymb,mathrsfs}       % AMSLaTeX符号宏包
 \RequirePackage{latexsym}
 
+%===CITE REFERENCE===
+\RequirePackage{cite}
+
+%===使整篇文章的首段都有缩进===
+\RequirePackage{indentfirst}
+
+%=========目录的制作==========
+\renewcommand\tableofcontents{%
+\centerline{\normalfont\Large\bfseries\contentsname%
+\@mkboth{%
+\MakeUppercase\contentsname}{\MakeUppercase\contentsname}}%
+\vskip 3ex%
+\@starttoc{toc}%
+}
 %===========目录==============
 \RequirePackage{titlesec}
 \RequirePackage{titletoc}
@@ -100,21 +159,6 @@
 \fi\fi
 
 
-%===使整篇文章的首段都有缩进===
-  
-\RequirePackage{cite}
-\RequirePackage{indentfirst}   
-%=========目录的制作==========
-\renewcommand\tableofcontents{%
-\centerline{\normalfont\Large\bfseries\contentsname%
-\@mkboth{%
-\MakeUppercase\contentsname}{\MakeUppercase\contentsname}}%
-\vskip 3ex%
-\@starttoc{toc}%
-}
-
-
-
 
 % 以下设置使得一页上最多有六个浮动对象（图、表），且顶部最多三个，底部最多三个。可自行修改参数
 \setcounter{totalnumber}{6}
@@ -147,9 +191,13 @@
 \newtheorem{conjecture}{Conjecture}[section] 
 \theoremstyle{definition}
 \newtheorem{remark}{Remark}[section]
+%---------Example------
+
+
+
 
 % 生成一些所需的参数（控制号，队伍名，页眉信息） 
-\newcommand{\setControlNumber}[1]{\def \controlnumber{#1}}
+\newcommand{\setControlNumber}[1]{\def \controlnumber{#1} \newcommand  {\team}{Team \#\ {#1}} }
 \newcommand {\setContestType}[1]{\def \contesttype {#1}
 \ifthenelse{\equal{\contesttype}{MCM}}{ 
 \newcommand{\contest}{Mathematical Contest in Modeling (MCM) Summary Sheet}
@@ -164,9 +212,7 @@
 \newcommand{\setProblemLetter}[1]{\def \problemletter{#1}}
 \newcommand{\setPaperTitle}[1]{\def \ourpapertitle{#1}}
 \newcommand{\setSummary}[1]{\def \oursummary{#1}}
-\newcommand{\setBibFilename}[1]{\def \ourbibfile{#1}}
-
-\newcommand{\team}{Team \#\ \controlnumber} 
+\newcommand{\setBibFilename}[1]{\def \ourbibfile{#1}  } 
 
 
 
@@ -196,12 +242,12 @@
     \begin{minipage}{0.33\textwidth}
         \centering
         Team Control Number\\[10pt]
-        {\fontsize{38pt}{25pt}\selectfont  \textbf{\controlnumber} }\normalsize\\[10pt]
+        {\fontsize{30pt}{25pt}\selectfont  \textbf{\controlnumber} }\normalsize\\[10pt]
         Problem Chosen\\[10pt]
         {\fontsize{18pt}{\baselineskip}\selectfont \textbf{\problemletter}}\normalsize\\
     \end{minipage}\hspace{\fill}
     % 右边的列表
-    \begin{tabularx}{0.28\textwidth}{lX}
+    \begin{tabularx}{0.3\textwidth}{lX}
         \multicolumn{2}{l}{For office use only}\\
         F1&\rule{3cm}{0.5pt}\\
         F2&\rule{3cm}{0.5pt}\\
@@ -211,8 +257,7 @@
     \vspace*{1ex}   % 留出一点空
     \vskip 1em
     \noindent\rule{\textwidth}{0.5pt}   % 插入一条线
-    % 生成顶部标题
-    % 【注意：参加ICM的队请将下面的标题改为Interdisciplinary Contest in Modeling (ICM)】
+   
     \begin{center}
         \textbf{ The \the \year\  \contest}\\ 
     \end{center}
@@ -222,8 +267,7 @@
     \endgroup
     %摘要标题
      \par\centerline{\large\bf Summary}\vskip5pt\par
-     %摘要内容
-     \noindent 
+     %摘要内容 
       \oursummary
      \par
      %底部留空
@@ -231,8 +275,8 @@
      \pagestyle{empty}
 }
  
-\newcommand{\showContents}{\newpage{\centering\tableofcontents}\newpage\pagestyle{fancy}}
-\newcommand{\showReference}{ 
+\newcommand{\showContents}{\newpage{\centering\tableofcontents}\newpage\pagestyle{fancy}\setcounter{page}{1}}
+\newcommand{\showReferences}{ 
 \addcontentsline{toc}{section}{References}
 \bibliographystyle{unsrt}%{brief}%{alpha}%{unsrt}
 \bibliography{\ourbibfile}}
