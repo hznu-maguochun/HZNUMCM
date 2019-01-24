@@ -4,7 +4,7 @@
 %% Oringinal template by latexstudio, <latexstudio@hotmail.com>
 %% improved by youjiarui189 (xjtu-blacksmith), <yjr134@163.com>
 
-\LoadClass{article}
+\LoadClass[12pt]{article}
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{HZNUMCM}[2019/01/19]
 \typeout{HZNUMCM,version 1.0}
@@ -72,7 +72,10 @@
 %===设置图表标题与上下文间距===
 \setlength{\belowcaptionskip}{4pt}
 \setlength{\abovecaptionskip}{4pt}
-
+%=====行间与段间距 
+\RequirePackage{setspace}
+\setlength{\parskip}{8pt}
+\setlength{\baselineskip}{20pt}
 %==========数学公式===========
 \RequirePackage{amsthm,amsfonts}        % 定理和字体
 \RequirePackage{amsmath,bm}
@@ -98,7 +101,6 @@
 \RequirePackage{titletoc}
 \setcounter{tocdepth}{3}    % 目录显示到subsubsection(3)级别,若只需到subsection(2)请自改
 \RequirePackage[font=small,]{caption}   % 使图表标题字号小一号
-\def\abstractname{Summary}          % 摘要标题
 
 %=========表格相关===========
 \RequirePackage{longtable,multirow,hhline,tabularx,array}   % 各种基本的表格宏包
@@ -268,13 +270,16 @@
     %摘要标题
      \par\centerline{\large\bf Summary}\vskip5pt\par
      %摘要内容 
-      \oursummary
+      {\fontsize{12pt}{14pt}\selectfont \oursummary}
      \par
      %底部留空
      \vskip 10pt
      \pagestyle{empty}
 }
  
+
+
+
 \newcommand{\showContents}{\newpage{\centering\tableofcontents}\newpage\pagestyle{fancy}\setcounter{page}{1}}
 \newcommand{\showReferences}{ 
 \addcontentsline{toc}{section}{References}
