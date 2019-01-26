@@ -1,16 +1,16 @@
 # Fdb version 3
-["bibtex McmTexExample"] 1548332130 "McmTexExample.aux" "McmTexExample.bbl" "McmTexExample" 1548334925
+["bibtex McmTexExample"] 1548491029 "McmTexExample.aux" "McmTexExample.bbl" "McmTexExample" 1548500524
   "/usr/local/texlive/2017/texmf-dist/bibtex/bst/base/unsrt.bst" 1480098433 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "McmTexExample.aux" 1548334925 1592 7a237cef549f1a1f820e7131b6486497 ""
-  "McmTexExample.bib" 1548330479 1318 81c2291d7a08f346fdb3981ee4e7b56a ""
+  "McmTexExample.aux" 1548500524 1588 958ddaa5f2c24264988d061fbb69bf35 ""
+  "McmTexExample.bib" 1548490512 1318 81c2291d7a08f346fdb3981ee4e7b56a ""
   (generated)
-  "McmTexExample.bbl"
   "McmTexExample.blg"
-["xdvipdfmx"] 1548334925 "McmTexExample.xdv" "McmTexExample.pdf" "McmTexExample" 1548334925
-  "McmTexExample.xdv" 1548334925 40536 09662c64d8794de39d008d1401f6c231 "xelatex"
+  "McmTexExample.bbl"
+["xdvipdfmx"] 1548500524 "McmTexExample.xdv" "McmTexExample.pdf" "McmTexExample" 1548500524
+  "McmTexExample.xdv" 1548500524 22808 e8a450581cffa90c089c80437e31cfea "xelatex"
   (generated)
   "McmTexExample.pdf"
-["xelatex"] 1548334922 "McmTexExample.tex" "McmTexExample.xdv" "McmTexExample" 1548334925
+["xelatex"] 1548500523 "McmTexExample.tex" "McmTexExample.xdv" "McmTexExample" 1548500524
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1480098689 1408 5937f58aa508ea2cea4901c07d10f5fe ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1480098689 1528 f853c4d1b4e0550255e02831fdc8496f ""
@@ -151,18 +151,17 @@
   "/usr/local/texlive/2017/texmf-dist/tex/latex/url/url.sty" 1480098842 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "/usr/local/texlive/2017/texmf-dist/tex/latex/xcolor/xcolor.sty" 1480098843 55589 34128738f682d033422ca125f82e5d62 ""
   "/usr/local/texlive/2017/texmf-dist/web2c/texmf.cnf" 1494087824 32646 eadc4ca26cdbe7105ac7c593aa8c4f72 ""
-  "/usr/local/texlive/2017/texmf-var/web2c/xetex/xelatex.fmt" 1548255916 3678529 bb10f08d35e0b81a7417640a64968e0c ""
+  "/usr/local/texlive/2017/texmf-var/web2c/xetex/xelatex.fmt" 1533270058 3678518 5f0b7c7396c00f1418416a5921864681 ""
   "/usr/local/texlive/2017/texmf.cnf" 1495593465 577 2b71d4d888f9e5560b2e99985915a9fa ""
-  "HZNUMCM.cls" 1548334919 10506 8fe4be6c35285b64251e32e64e52983b ""
-  "McmTexExample.aux" 1548334925 1592 7a237cef549f1a1f820e7131b6486497 ""
-  "McmTexExample.bbl" 1548332130 263 da2c6c7ca75a408d9f1e9a53be5f5bba "bibtex McmTexExample"
-  "McmTexExample.out" 1548334925 528 ef1df05ef2ab0aaf234a869f0a15b94f ""
-  "McmTexExample.tex" 1548334675 2547 f39dab05a8fa2775207a2a7793fd9116 ""
-  "McmTexExample.toc" 1548334925 550 8a19c3beb04b60228f0f47170d3b3c98 ""
-  "lshort.pdf" 1548330479 613128 622a797a2a313bbcc33ee6aa86255fbd ""
+  "HZNUMCM.cls" 1548500519 10812 b10c20be2af6411c8383c43d1b32072a ""
+  "McmTexExample.aux" 1548500524 1588 958ddaa5f2c24264988d061fbb69bf35 ""
+  "McmTexExample.bbl" 1548491029 263 da2c6c7ca75a408d9f1e9a53be5f5bba "bibtex McmTexExample"
+  "McmTexExample.out" 1548500524 528 ef1df05ef2ab0aaf234a869f0a15b94f ""
+  "McmTexExample.tex" 1548491013 2548 797cf34abaf7409941d33791e83a5494 ""
+  "McmTexExample.toc" 1548500524 550 8a19c3beb04b60228f0f47170d3b3c98 ""
   (generated)
-  "McmTexExample.out"
   "McmTexExample.log"
-  "McmTexExample.xdv"
   "McmTexExample.aux"
+  "McmTexExample.out"
   "McmTexExample.toc"
+  "McmTexExample.xdv"

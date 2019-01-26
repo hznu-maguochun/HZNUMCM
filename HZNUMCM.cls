@@ -202,10 +202,10 @@
 \newcommand{\setControlNumber}[1]{\def \controlnumber{#1} \newcommand  {\team}{Team \#\ {#1}} }
 \newcommand {\setContestType}[1]{\def \contesttype {#1}
 \ifthenelse{\equal{\contesttype}{MCM}}{ 
-\newcommand{\contest}{Mathematical Contest in Modeling (MCM) Summary Sheet}
+\newcommand{\contest}{MCM/ICM\\ Summary Sheet}
 }{
 	\ifthenelse{\equal{\contesttype}{ICM}}{
-		\newcommand{\contest}{Interdisciplinary Contest in Modeling (ICM)  Summary Sheet}
+		\newcommand{\contest}{MCM/ICM\\ Summary Sheet}
 	}{
 	\ClassError{HZNUMCM}{without contesttype}{Please check the contest type, only choose MCM or ICM.}
 	}
@@ -228,8 +228,8 @@
 
 %=====摘要页=====
 \def\showSummarySheet{ %生成sheet头命令的定义
-    \null
-    \vskip 1em % 以上两条命令留出了sheet头和顶部的间距，若不要这个间距（比如摘要放不下）请注释掉这两条命令
+    %\null
+    %\vskip 1em % 以上两条命令留出了sheet头和顶部的间距，若不要这个间距（比如摘要放不下）请注释掉这两条命令
     \begingroup
     \fontfamily{fvs}\fontseries{m}\selectfont  %字体设置
     % 左边的列表
@@ -244,9 +244,9 @@
     \begin{minipage}{0.33\textwidth}
         \centering
         Team Control Number\\[10pt]
-        {\fontsize{30pt}{25pt}\selectfont  \textbf{\controlnumber} }\normalsize\\[10pt]
+        {\color{red} \fontsize{24pt}{25pt}\selectfont  \textbf{\controlnumber} }\normalsize\\[10pt]
         Problem Chosen\\[10pt]
-        {\fontsize{18pt}{\baselineskip}\selectfont \textbf{\problemletter}}\normalsize\\
+        {\color{red}\fontsize{24pt}{\baselineskip}\selectfont \textbf{\problemletter}}\normalsize\\
     \end{minipage}\hspace{\fill}
     % 右边的列表
     \begin{tabularx}{0.3\textwidth}{lX}
@@ -256,24 +256,28 @@
         F3&\rule{3cm}{0.5pt}\\
         F4&\rule{3cm}{0.5pt}\\
     \end{tabularx}
-    \vspace*{1ex}   % 留出一点空
-    \vskip 1em
-    \noindent\rule{\textwidth}{0.5pt}   % 插入一条线
-   
+   % \vspace*{1ex}   % 留出一点空
+    \vskip 0.4em  
+    \noindent\rule{\textwidth}{0.5pt} 
+    \vskip -2em  
+    \noindent\rule{\textwidth}{0.3pt}   % 插入一条线
+    \null
+    \vspace{-3em} 
     \begin{center}
-        \textbf{ The \the \year\  \contest}\\ 
-    \end{center}
+        \textbf{ \large \the \year\ \\ {\normalsize\contest}}\\ 
+        {\scriptsize  (Your team's summary should be included as the first page of your electronic submission.)\\ \vspace{-0.8em}
+Type a summary of your results on this page. Do not include the name of your school, advisor, or team members on this page.}
+    \end{center} 
     \begin{center}
-    \Large\bf\ourpapertitle    % 插入论文标题，注意字号可自己修改
+    \large\bf\ourpapertitle    % 插入论文标题，注意字号可自己修改
     \end{center}
     \endgroup
     %摘要标题
-     \par\centerline{\large\bf Summary}\vskip5pt\par
+     \par\centerline{\large\bf Summary}\vskip3pt\par
      %摘要内容 
       {\fontsize{12pt}{14pt}\selectfont \oursummary}
      \par
-     %底部留空
-     \vskip 10pt
+     %底部留空 
      \pagestyle{empty}
 }
  
