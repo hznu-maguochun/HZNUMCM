@@ -1,7 +1,0 @@
-\contentsline {section}{\numberline {1}Basic usage of the HZNUMCM class}{1}{section.1}
-\contentsline {subsection}{\numberline {1.1}Basic document structure for using HZNUMCM class}{1}{subsection.1.1}
-\contentsline {subsection}{\numberline {1.2}Process from source files to target .pdf}{1}{subsection.1.2}
-\contentsline {section}{\numberline {2}Introduction to mathematical typeseting within Latex}{1}{section.2}
-\contentsline {section}{\numberline {3}Some complements}{1}{section.3}
-\contentsline {section}{References}{1}{section.3}
-\contentsfinish 
