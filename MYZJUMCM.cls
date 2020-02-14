@@ -23,7 +23,7 @@
 \RequirePackage[perpage]{footmisc}  
 \RequirePackage{ifthen}                     % 逻辑结构宏包（仅模板文件用到）
 \RequirePackage{lastpage}                   % 获得最后一面页码的宏包（生成"Page X of XX"）
-\RequirePackage{paralist}                   % 用以修改itemize各项间距的宏包
+\RequirePackage{paralist}                   % 用以修改itemize各项间距的宏包 
 % 附录和程序
 \RequirePackage{listings} 
 \lstset{
@@ -63,7 +63,6 @@
     escapechar={:},
     emphstyle={[2]{\bfseries\color{Sienna2}}},
 }
-
 
 
 % 代码环境宏包
